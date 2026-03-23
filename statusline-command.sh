@@ -65,11 +65,11 @@ fi
 # --- Context display ---
 if [ -n "$used" ]; then
     used_int=${used%.*}
-    if [ "$used_int" -ge 90 ] 2>/dev/null; then
+    if [ -n "$used_int" ] && [ "$used_int" -ge 90 ]; then
         ctx_display="ctx: ${used}% [!!!]"
-    elif [ "$used_int" -ge 75 ] 2>/dev/null; then
+    elif [ -n "$used_int" ] && [ "$used_int" -ge 75 ]; then
         ctx_display="ctx: ${used}% [!!]"
-    elif [ "$used_int" -ge 50 ] 2>/dev/null; then
+    elif [ -n "$used_int" ] && [ "$used_int" -ge 50 ]; then
         ctx_display="ctx: ${used}% [!]"
     else
         ctx_display="ctx: ${used}%"

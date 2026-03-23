@@ -22,11 +22,11 @@ myproject | Opus 4.6 | ctx: 32.5% | today: $5.43
 
 ## Setup
 
-**1. Copy the script:**
+**1. Install the script:**
 
 ```bash
-cp statusline-command.sh ~/.claude/statusline-command.sh
-chmod +x ~/.claude/statusline-command.sh
+curl -fsSL https://raw.githubusercontent.com/alibrohde/claude-code-statusline/main/statusline-command.sh \
+  -o ~/.claude/statusline-command.sh && chmod +x ~/.claude/statusline-command.sh
 ```
 
 **2. Configure Claude Code to use it:**
